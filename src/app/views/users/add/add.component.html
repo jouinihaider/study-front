@@ -1,0 +1,77 @@
+<div class="app-body d-flex">
+      <div class="container m-auto">
+        <div class="row">
+          <div class="col-md-6 mx-auto">
+            <div class="card mx-4">
+              <div class="card-body p-4">
+                <form #f="ngForm">
+                  <h1>Register</h1>
+                  <p class="text-muted">Create your account</p>
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="icon-user"></i></span>
+                    </div>
+                    <input type="text" name="nom"  ngModel #n="ngModel" class="form-control" placeholder="Nom" autocomplete="nom" required>
+                  </div>
+
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="icon-user"></i></span>
+                    </div>
+                    <input type="text" name="prenom" ngModel #pre="ngModel" class="form-control" placeholder="prenom" autocomplete="prenom" required>
+                  </div>
+
+                                    
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="icon-user"></i></span>
+                    </div>
+                    <input type="text" name="telephone" ngModel #e="ngModel" class="form-control" placeholder="Telephone" autocomplete="telephone" required>
+                  </div>
+
+
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">@</span>
+                    </div>
+                    <input type="text" name="email" ngModel #e="ngModel" class="form-control" placeholder="Email" autocomplete="email" required>
+                  </div>
+                  
+
+
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="icon-lock"></i></span>
+                    </div>
+                    <input type="password" name="password" ngModel #p="ngModel" class="form-control" placeholder="Password" autocomplete="new-password" required>
+                  </div>
+                  <div class="input-group mb-4">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="icon-lock"></i></span>
+                    </div>
+                    <input type="password" name="repeat-password" ngModel="nom" #rp="ngModel" class="form-control" placeholder="Repeat password" autocomplete="new-password" required>
+                  </div>
+                  <div class="input-group mb-4">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="icon-list"></i></span>
+                    </div>
+                    <select name="role" ngModel class="form-control">
+                        <option value="{{r}}" *ngFor="let r of roles">{{r}}</option>
+                    </select>
+                  </div>
+                  <!-- <div class="input-group mb-4">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="icon-user"></i></span>
+                    </div>
+                    <input type="file" name="repeat-password" ngModel class="form-control" placeholder="" autocomplete="" required>
+                  </div> -->
+                  <button [disabled]="f.invalid || p.value != rp.value" type="button" class="btn btn-block btn-success" (click)="addUser(f.value)">Create Account</button>
+                  <!-- <button type="button" class="btn btn-block btn-success" (click)="addUser(f.value)">Create Account</button> -->
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+  

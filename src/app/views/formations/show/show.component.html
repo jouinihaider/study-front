@@ -1,0 +1,51 @@
+
+<form #f="ngForm">
+    <div class="row">
+        <!-- Close span -->
+        <div class="col-lg-12 d-flex mt-1 mb-3">
+            <span class="ml-auto my-auto" (click)="close()" style="cursor: pointer;">X</span>
+        </div><!-- Close span -->
+
+        <!--titre -->
+        <div class="col-lg-12 mt-3">
+            <div class="row">
+                <div class="col-4 my-auto">
+                    Titre
+                </div>
+                <div class="col-8 my-auto">
+                    <input [disabled]="modifyCheck"  name="titre" type="text"  class="form-control my-auto" ngModel  [(ngModel)]="soloExemple.titre">
+                </div>
+            </div>
+        </div><!--titre -->
+
+        <!--description -->
+        <div class="col-lg-12 mt-3">
+            <div class="row">
+                <div class="col-4 my-auto">
+                    description
+                </div>
+                <div class="col-8 my-auto">
+                    <input [disabled]="modifyCheck"  name="description" type="text"  class="form-control my-auto" ngModel  [(ngModel)]="soloExemple.description">
+                </div>
+            </div>
+        </div><!--description -->
+
+        <!--formateur -->
+        <div class="col-lg-12 mt-3">
+            <div class="row">
+                <div class="col-4 my-auto">
+                    formateur
+                </div>
+                <div class="col-8 my-auto">
+                    <input [disabled]="modifyCheck"  name="formateur" type="text"  class="form-control my-auto" ngModel  [(ngModel)]="soloExemple.formateur">
+                </div>
+            </div>
+        </div><!--formateur -->
+
+
+        <!-- Button  -->
+        <div class="col-lg-12 mt-5 d-flex">
+            <button class="btn btn-primary m-auto" (click)="modifyExempleBtn(f.value)">{{textModify}}</button>
+        </div><!-- Button  -->
+    </div>
+</form>

@@ -1,0 +1,28 @@
+
+<form #f="ngForm">
+    <div class="row">
+        <!-- Close span -->
+        <div class="col-lg-12 d-flex mt-1 mb-3">
+            <span class="ml-auto my-auto" (click)="close()" style="cursor: pointer;">X</span>
+        </div><!-- Close span -->
+
+
+        <!-- Date de circulation -->
+        <div class="col-lg-12 mt-3">
+            <div class="row">
+                <div class="col-4 my-auto">
+                    Date de circulation
+                </div>
+                <div class="col-8 my-auto">
+                    <input  [disabled]="modifyCheck" type="date"  name="date_circulation" class="form-control my-auto">
+                </div>
+            </div>
+        </div><!-- Date de circulation -->
+
+        <!-- Button Transfert -->
+        <div class="col-lg-12 mt-5 d-flex">
+            <button class="btn btn-primary my-auto ml-auto mr-3" (click)="modifyExempleBtn(f.value)">{{textModify}}</button>
+
+        </div><!-- Button Transfert -->
+    </div>
+</form>

@@ -1,0 +1,42 @@
+<div class="app-body">
+  <main class="main d-flex align-items-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 mx-auto">
+          <div class="card-group">
+            <div class="card p-4">
+              <div class="card-body">
+                <form #f="ngForm">
+                  <div class="d-flex w-100 flex-column" >
+                    <!-- <img src="assets/img/brand/logo.svg" class="mx-auto mb-5" alt=""/> -->
+                    <h1 class="mb-4">Login</h1>
+                  </div>
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="icon-user"></i></span>
+                    </div>
+                    <input type="text" class="form-control {{error}}" ngModel #e="ngModel" name="email" placeholder="Username" autocomplete="username" required>
+                  </div>
+                  <div class="input-group mb-4">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="icon-lock"></i></span>
+                    </div>
+                    <input type="password" class="form-control {{error}}" ngModel #p="ngModel" name="password" placeholder="Password" autocomplete="current-password" required>
+                  </div>
+                <div class="d-flex my-3">
+                    <p *ngIf="res" class="m-auto">{{message}}</p>
+                  </div>
+                  <div class="row">
+                    <div class="col-12 d-flex">
+                      <button [disabled]="f.invalid" type="button" class="btn btn-primary px-4 mx-auto" (click)="signIn(f.value)">Login</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>

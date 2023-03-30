@@ -1,0 +1,32 @@
+<div class="app-body d-flex">
+      <div class="container m-auto">
+        <div class="row">
+          <div class="col-md-6 mx-auto">
+            <div class="card mx-4">
+              <div class="card-body p-4">
+                <form #f="ngForm" >
+                  <p class="text-muted">Create your formations</p>
+                  
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="icon-user"></i></span>
+                    </div>
+                    <input type="text" name="titre"  ngModel #n="ngModel" class="form-control" placeholder="Nom" autocomplete="titre" required>
+                  </div>
+
+                  <!-- <div class="input-group mb-4">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="icon-user"></i></span>
+                    </div>
+                    <input type="file" name="repeat-password" ngModel class="form-control" placeholder="" autocomplete="" required>
+                  </div> -->
+                  <button type="button" class="btn btn-block btn-success" (click)="add(f.value)">Create</button>
+                  <!-- <button type="button" class="btn btn-block btn-success" (click)="addUser(f.value)">Create Account</button> -->
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+  

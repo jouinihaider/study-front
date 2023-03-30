@@ -1,0 +1,78 @@
+
+<form #f="ngForm">
+    <div class="row">
+        <!-- Close span -->
+        <div class="col-lg-12 d-flex mt-1 mb-3">
+            <span class="ml-auto my-auto" (click)="close()" style="cursor: pointer;">X</span>
+        </div><!-- Close span -->
+
+        <!--Nom -->
+        <div class="col-lg-12 mt-3">
+            <div class="row">
+                <div class="col-4 my-auto">
+                   Nom
+                </div>
+                <div class="col-8 my-auto">
+                    <input [disabled]="modifyCheck"  name="nom" type="text"  class="form-control my-auto" ngModel  [(ngModel)]="soloExemple.nom">
+                </div>
+            </div>
+        </div><!--Nom -->
+<!--  -->
+        <!-- Prenom -->
+        <div class="col-lg-12 mt-3">
+            <div class="row">
+                <div class="col-4 my-auto">
+                    Prenom
+                </div>
+                <div class="col-8 my-auto">
+                    <input [disabled]="modifyCheck"  name="prenom" ngModel  [(ngModel)]="soloExemple.prenom" type="text"  class="form-control my-auto">
+                    <!-- <input [disabled]="modifyCheck"  name="prenom" ngModel  [(ngModel)]="soloExemple.prenom" type="text"  class="form-control my-auto" value="{{soloExemple.prenom ? soloExemple.prenom : ''}}"> -->
+                </div>
+            </div>
+        </div><!--Prenom -->
+
+        <!--Email -->
+        <div class="col-lg-12 mt-3">
+            <div class="row">
+                <div class="col-4 my-auto">
+                    Email
+                </div>
+                <div class="col-8 my-auto">
+                    <input [disabled]="modifyCheck"  name="email" ngModel type="text"  class="form-control my-auto" ngModel  [(ngModel)]="soloExemple.email">
+                </div>
+            </div>
+        </div><!--Email -->
+
+
+        <!-- Telephone -->
+        <div class="col-lg-12 mt-3">
+            <div class="row">
+                <div class="col-4 my-auto">
+                    Telephone
+                </div>
+                <div class="col-8 my-auto">
+                    <input [disabled]="modifyCheck"  name="telephone" ngModel  [(ngModel)]="soloExemple.telephone" type="text"  class="form-control my-auto">
+                </div>
+            </div>
+        </div><!--Telephone -->
+
+        <!-- role -->
+        <div class="col-lg-12 mt-3">
+            <div class="row">
+                <div class="col-4 my-auto">
+                    role
+                </div>
+                <div class="col-8 my-auto">
+                    <select [disabled]="modifyCheck"  name="role" class="form-control"  [(ngModel)]="soloExemple.role">
+                        <option [value]="r" *ngFor="let r of roles" [selected]="r == soloExemple.role">{{r}}</option>
+                    </select>
+                </div>
+            </div>
+        </div><!-- role -->
+
+        <!-- Button  -->
+        <div class="col-lg-12 mt-5 d-flex">
+            <button class="btn btn-primary m-auto" (click)="modifyExempleBtn(f.value)">{{textModify}}</button>
+        </div><!-- Button  -->
+    </div>
+</form>

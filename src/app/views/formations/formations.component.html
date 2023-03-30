@@ -1,0 +1,80 @@
+<div class="animated fadeIn">
+    <div class="row  my-5">
+        <div class="col-12">
+            <h1>Formations</h1><br>
+        </div>
+        <div class="col-6">
+            <a [routerLink]="['/formations/add']" class="btn btn-block btn-success" style="width: fit-content;">Ajouter</a>
+        </div>
+    </div>
+    
+      <!-- number pages -->
+      <div class="d-flex mb-2">
+        <!-- Number items -->
+        <label class="my-auto mr-3">
+          Afficher
+        </label>
+        <select class="form-control  mr-3 w-auto my-auto" name="status" [(ngModel)]="params.limit" (ngModelChange)="searchStatus()">
+          <option [value]="item" *ngFor="let item of numberItemsFilterList">{{item}}</option>
+        </select><!-- Number items -->
+        <label class="my-auto">
+          éléments
+        </label>
+    </div><!-- number pages -->
+    
+    <div class="row justify-content-center mt-3" style="overflow: hidden;">
+      <div class="col-lg-{{colTable}}" >
+        <div class="card">
+          <div class="card-body" style="overflow-x: auto;">
+            <table class="table" >
+              <!-- Head table -->
+              <thead>
+                <tr>
+                  <th>Titre</th>
+                  <th>Description</th>
+                  <th>Formateur</th>
+
+                  <th>Action</th>
+                </tr>
+              </thead><!-- Head table -->
+              <!-- Body table -->
+              <tbody>
+                <tr *ngFor="let exemple of exemples">
+                  <td>{{exemple.titre}}</td>
+                  <td>{{exemple.description}}</td>
+                  <td>{{exemple.formateur}}</td>
+              
+                  <td>
+                    <div class="d-flex">
+                      <button class="btn btn-block btn-warning my-auto px-3 mr-2" (click)="showExemple(exemple)">Afficher</button>
+                      <button type="button" class="btn btn-block btn-danger my-auto px-3" (click)="deleteUser(exemple._id)">Supprimer</button>
+                    </div>
+                  </td> 
+                </tr>
+              
+              </tbody><!-- Body table -->
+            </table>
+
+            <!-- Pagination -->
+            <ul class="pagination justify-content-center">
+              <li class="page-item"><button [disabled]="currentPage == 1" class="page-link" (click)="setPage(currentPage-1)">Prev</button></li>
+              <li class="page-item {{currentPage == item && 'active'}}" *ngFor="let item of numbers">
+                <button class="page-link" *ngIf="(item >= currentPage-2 && item <= currentPage+2)" (click)="setPage(item)">{{item}}</button>
+              </li>
+              <li class="page-item"><button [disabled]="numPages == 1 || numPages == currentPage" class="page-link" (click)="setPage(currentPage+1)">Next</button></li>
+            </ul><!-- Pagination -->
+
+            <div class="d-flex justify-content-start">
+              <p class="my-auto mr-4">
+                Affichage de {{totalItems}} sur {{totalExemples}} éléments
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-{{colElement}} solo-show fadeIn"  *ngIf="showSoloExemple">
+            <app-show [soloExemple]="soloExemple" (closeShow)="closeShow()"></app-show>
+      </div>
+    </div>
+</div>

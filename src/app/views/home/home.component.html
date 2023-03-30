@@ -1,0 +1,164 @@
+<section>
+  <carousel [interval]="false">
+    <slide>
+      <img src="../../../assets/img/front/slide1.png" class="" alt="First slide" style="display: block; width: 100%;height: 700px"/>                
+      <!-- <img src="https://picsum.photos/id/1032/900/500" alt="First slide" style="display: block; width: 100%;height: 700px"> -->
+      <div class="carousel-caption d-none d-md-block">
+        <h3>First slide label</h3>
+        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+      </div>
+    </slide>
+    <slide>
+      <img src="../../../assets/img/front/slide2.png" alt="Second slide" style="display: block; width: 100%;height: 700px">
+      <div class="carousel-caption d-none d-md-block">
+        <h3>Second slide label</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+    </slide>
+  </carousel>
+</section>
+
+<section style="background: white">
+  <div class="container py-5" style="background: white">
+    <h1 align="center">Nos services</h1>
+    <p  align="center">Faites-nous confiance et avancez</p>
+    <div class="row mt-5">
+      <!-- Orientation -->
+      <div class="col-4 p-3 d-flex flex-column">
+        <img src="../../../assets/img/front/or.png" class="mx-auto mb-5" width="150" alt=""/>
+        <h3 align="center">Orientation</h3>
+        <p align="center">
+          Des spécialistes vous aident à mettre en valeur vos compétences, 
+          à vous orienter afin de pouvoir choisir le cursus
+          qui vous correspond le mieux, à fixer vos objectifs et à mettre en avant vos talents.      
+        </p>
+      </div><!-- Orientation -->
+
+      <!-- Accompagnement -->
+      <div class="col-4 p-3 d-flex flex-column">
+        <img src="../../../assets/img/front/acco.png" class="mx-auto mb-5" width="150" alt=""/>
+        <h3 align="center">Accompagnement</h3>
+        <p align="center">
+          Un soutien permanent et sans faille tout au long de la période de la réalisation 
+          du dossier jusqu'à la préparation de votre entretien.
+        </p>
+      </div><!-- Accompagnement -->
+
+      <!-- Conseil -->
+      <div class="col-4 p-3 d-flex flex-column">
+        <img src="../../../assets/img/front/conseil.png" class="mx-auto mb-5" width="150" alt=""/>
+        <h3 align="center">Conseil</h3>
+        <p align="center">
+          Des conseillers expérimentés vous guident dans votre choix de parcours, 
+          vous aident à réussir votre projet d’étude et à améliorer vos chances d’approbation.
+        </p>
+      </div><!-- Conseil -->
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container py-5">
+      <h1 align="center">Témoignages</h1>
+      <div class="card-body mt-5">
+        <carousel [interval]="false">
+          <slide class=" px-5">
+            <div class="row px-5">
+                <div class="col-3">
+                  <img src="../../../assets/img/front/avatar.png" class="mx-auto mb-5" width="150" alt=""/>                
+                </div>
+                <div class="col-9">
+                  <h1>Lorem ipsum 1</h1>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae iste veniam amet, omnis aspernatur natus repellat vel voluptatum! Cumque excepturi debitis quod corporis ut architecto illum sit cum pariatur reiciendis.
+                  </p>
+                </div>
+            </div>
+          </slide>
+          <slide class=" px-5">
+            <div class="row px-5">
+                <div class="col-3">
+                  <img src="../../../assets/img/front/avatar.png" class="mx-auto mb-5" width="150" alt=""/>                
+                </div>
+                <div class="col-9">
+                  <h1>Lorem ipsum 2</h1>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae iste veniam amet, omnis aspernatur natus repellat vel voluptatum! Cumque excepturi debitis quod corporis ut architecto illum sit cum pariatur reiciendis.
+                  </p>
+                </div>
+            </div>
+          </slide>
+          <slide class=" px-5">
+            <div class="row px-5">
+                <div class="col-3">
+                  <img src="../../../assets/img/front/avatar.png" class="mx-auto mb-5" width="150" alt=""/>                
+                </div>
+                <div class="col-9">
+                  <h1>Lorem ipsum 3</h1>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae iste veniam amet, omnis aspernatur natus repellat vel voluptatum! Cumque excepturi debitis quod corporis ut architecto illum sit cum pariatur reiciendis.
+                  </p>
+                </div>
+            </div>
+          </slide>
+        </carousel>
+      </div>
+  </div>
+</section>
+  
+<section>
+  <div class="container p-5">
+  <div class="container p-5" style="background:white">
+
+    <h1 align="center">ÊTRE RAPPELÉ?</h1>
+    <p  align="center" class="mb-4"> Entrez vos coordonnées dans les champs ci-dessous afin que nous puissions vous rappeler :</p>
+    
+    <form action="" method="post" enctype="multipart/form-data" class="form-horizontal mt-5">
+
+      <div class="form-group row">
+        <label class="col-md-3 col-form-label" for="email-input">Name</label>
+        <div class="col-md-9">
+          <input type="text" id="name-input" name="name-input" class="form-control" placeholder="Enter name" autocomplete="name">
+          <span class="help-block">Please enter your name</span>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-md-3 col-form-label" for="email-input">Email</label>
+        <div class="col-md-9">
+          <input type="email" id="email-input" name="email-input" class="form-control" placeholder="Enter Email" autocomplete="email">
+          <span class="help-block">Please enter your email</span>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="col-md-3 col-form-label" for="date-input">Date Input</label>
+        <div class="col-md-9">
+          <input class="form-control" id="date-input" type="date" name="date-input" placeholder="date">
+          <span class="help-block">Please enter a valid date</span>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-md-3 col-form-label" for="textarea-input">Textarea</label>
+        <div class="col-md-9">
+          <textarea id="textarea-input" name="textarea-input" rows="9" class="form-control" placeholder="Content.."></textarea>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-md-3 col-form-label" for="select1">Select</label>
+        <div class="col-md-9">
+          <select id="select1" name="select1" class="form-control">
+            <option value="0">Please select</option>
+            <option value="1">Option #1</option>
+            <option value="2">Option #2</option>
+            <option value="3">Option #3</option>
+          </select>
+        </div>
+      </div>
+    </form>
+    <div class="d-flex">
+      <button type="submit" class="btn btn-sm btn-primary ml-auto mr-3"><i class="fa fa-dot-circle-o"></i> Submit</button>
+      <button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Reset</button>
+    </div>
+  </div>
+  </div>
+</section>
